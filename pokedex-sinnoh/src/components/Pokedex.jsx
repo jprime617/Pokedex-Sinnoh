@@ -69,12 +69,12 @@ export default function Pokedex() {
     };
 
     return (
-        <div>
+        <div className="container-pokemon">
             {pokemon && (
                 <div className="pokemon">
                     <h1>Pokedex Sinnoh</h1>
                     <p>{form ? form.name : pokemon.name}</p>
-                    <p>Peso: {pokemon.weight}g</p>
+                    {/* <p>Peso: {pokemon.weight}g</p> */}
                     <img
                         id="imgPoke"
                         src={
@@ -84,6 +84,7 @@ export default function Pokedex() {
                         }
                         alt={form ? form.name : pokemon.name}
                     />
+                    <div className="buttons">
                     <button onClick={previousPokemon}>Anterior</button>
                     <button onClick={nextPokemon}>Próximo</button>
                     <button onClick={toggleShiny}>
@@ -95,7 +96,8 @@ export default function Pokedex() {
                             <button onClick={nextForm}>Próxima Forma</button>
                         </>
                     )}
-                    <p>{id}</p>
+                    </div>
+                    {/* <p>{id}</p> */}
                 </div>
             )}
         </div>
